@@ -18,3 +18,7 @@ table.table, .table th, .table td {
 .table .client-selected{
     background-color: #f3f3f3;
 }
+
+.clickable{
+    cursor: pointer;
+}
