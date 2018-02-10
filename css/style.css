@@ -1,0 +1,20 @@
+.mainSection{
+    margin: 40px 20px;   
+}
+
+table.table, .table th, .table td {
+    border: 1px solid #DDD;
+}
+
+.table th{
+    background-color: #6b6969;
+    color: #FFF;
+}
+
+.table label{
+    display: block !important;
+}
+
+.table .client-selected{
+    background-color: #f3f3f3;
+}
