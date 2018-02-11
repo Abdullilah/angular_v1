@@ -22,3 +22,7 @@ table.table, .table th, .table td {
 .clickable{
     cursor: pointer;
 }
+
+.danger{
+    color: #f00;
+}
