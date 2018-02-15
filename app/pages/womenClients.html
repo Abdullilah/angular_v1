@@ -1,0 +1,18 @@
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Company</th>
+        <th>Email</th>
+        <th>Gender</th>
+    </tr>
+    <tr ng-repeat="client in clients" ng-if="client.gender === 'female'">
+        <td>{{$index}}</td>
+        <td>{{client.name}}</td>
+        <td>{{client.age}}</td>
+        <td>{{client.company}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.gender}}</td>
+    </tr>
+</table>

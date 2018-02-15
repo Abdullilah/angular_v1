@@ -1,3 +1,7 @@
+.navbar{
+    border-radius: 0 !important;
+}
+
 .mainSection{
     margin: 20px;
 }
@@ -25,4 +29,17 @@ table.table, .table th, .table td {
 
 .danger{
     color: #f00;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group .dropdown button{
+    top: 23px;
+    position: absolute;
+}
+
+.input-group > div{
+    margin-bottom: 20px;
 }

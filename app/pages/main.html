@@ -1,0 +1,46 @@
+<div class="input-group col-lg-12">
+    <div class="col-lg-6">
+        <label for="searchText">Search</label>
+        <input type="text" class="form-control" placeholder="Type Search Word" id="searchText" ng-model="filterWord">
+    </div>
+
+    <div class="dropdown col-lg-6">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Order By
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a ng-click="changeOrder('+name')">Name ASC</a></li>
+            <li><a ng-click="changeOrder('-name')">Name DESC</a></li>
+            <li><a ng-click="changeOrder('+email')">Email ASC</a></li>
+            <li><a ng-click="changeOrder('-email')">Email DESC</a></li>
+        </ul>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th ng-click="changeOrderByClick('name')" class="clickable">Name <span class="glyphicon glyphicon-sort"></span></th>
+        <th>Age</th>
+        <th>Company</th>
+        <th ng-click="changeOrderByClick('email')" class="clickable">Email <span class="glyphicon glyphicon-sort"></span></th>
+        <th>Gender</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    <tr ng-repeat='client in clients | filter: filterWord | orderBy: orderWord'
+        ng-class="{'client-selected': client === selectedClient}"
+        ng-click="clientClicked(client)">
+        <td>{{$index}}</td>
+        <td>{{client.id}}</td>
+        <td>{{client.name}}</td> 
+        <td>{{client.age}}</td>
+        <td>{{client.company}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.gender}}</td>
+        <td><span class="danger clickable" ng-click="deleteClient(client)">Delete</span></td>
+        <td><a href="/angular_v1/main/{{client.id}}">Edit</a></td>
+    </tr>
+</table>

@@ -1,0 +1,44 @@
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Company</th>
+        <th>Email</th>
+        <th>Gender</th>
+    </tr>
+    <tr>
+        <td>{{client.id}}</td>
+        <td>{{client.name}}</td> 
+        <td>{{client.age}}</td>
+        <td>{{client.company}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.gender}}</td>
+    </tr>
+</table>
+
+<div class="input-group col-lg-12">
+    <div class="col-lg-6">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" placeholder="Name" id="name" ng-model="client.name">
+    </div>
+    <div class="col-lg-6">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" placeholder="Age" id="name" ng-model="client.age">
+    </div>
+    <div class="col-lg-6">
+        <label for="company">Company</label>
+        <input type="text" class="form-control" placeholder="Company" id="company" ng-model="client.company">
+    </div>
+    <div class="col-lg-6">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" placeholder="Email" id="email" ng-model="client.email">
+    </div>
+    <div class="col-lg-6">
+        <label for="gender">Gender</label>
+        <select ng-model="client.gender" class="form-control" id="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
+</div>
